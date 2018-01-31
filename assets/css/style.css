@@ -538,6 +538,8 @@ h4.item-title.text-center {
 
 .call-to-action{
 	background: url(../images/slides/img2.JPG) center center/cover no-repeat fixed;
+	background-color: rgb(23, 111, 56);
+    background-blend-mode: multiply;
 }
 .text-all {
   padding: 95px 0;
@@ -844,9 +846,9 @@ letter-spacing: -2px;
 content: '';
 width: 100%;
 height: initial;
-background: #196f38;
+/*background: #196f38;
 background: rgba(23, 111, 56, 0.5);
-/*background: rgba(8, 111, 148, 0.5);*/
+*//*background: rgba(8, 111, 148, 0.5);*/
 z-index: 99999;
 position: absolute;
 height: inherit;
