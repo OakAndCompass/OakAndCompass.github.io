@@ -1,0 +1,321 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+body {
+	font-family: 'Lato';
+	font-size: 16px;
+	line-height: 1.7em;
+	color: #6E6E6E;
+}
+
+header {
+	position: relative;
+	z-index: 1000;
+	display: flex;
+	flex-wrap: wrap;
+    background-color: rgba(255,255,255,0.9);
+    padding: 20px 0;
+    margin: 0 0;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+header.home {
+    margin: 20px 0; 
+    padding: 0;
+}
+
+header.about {
+	background-image: url('../images/slides/img3.JPG');
+    background-position: center -150px;
+}
+
+header.getinvolved {
+	background-image: url('../images/slides/trapp-craft.JPG');
+	background-position: center -100px;
+}
+
+header.contact {
+	background-image: url('../images/family-photo1.jpg');
+	background-position: center -100px;
+}
+
+.bottom-banner {
+	background-size: 100%;
+	background-attachment: fixed;
+	height: 250px;
+}
+
+.bottom-banner.getinvolved {
+	background-image: url('../images/slides/trapp-craft.JPG');
+	background-position: center -100px;
+}
+
+.bottom-banner.about {
+	background-image: url('../images/slides/img3.JPG');
+    background-position: center -200px;
+}
+
+.bottom-banner.contact {
+	background-image: url('../images/family-photo1.jpg');
+	background-position: center -100px;
+}
+
+#logo {
+	flex: 0 1 0;
+	margin: -20px 0 -20px 40px;
+	padding: 40px 20px;
+	background-color: rgba(255,255,255,1);
+}
+
+header.home #logo {
+	padding: 20px;
+	margin: 0 0 0 40px;
+	background-color: initial;
+}
+
+header.home #mission {
+	flex: 1 1 0; 
+	padding: 20px; 
+	margin-right: 40px;
+	align-self: center;
+}
+
+header h1 { font-size: 40px; padding: 0; }
+
+h1, h2 { display: inline-block; }
+h1 { font-family: 'Oswald', san-serif; }
+h2 { font-family: 'Lato', san-serif; font-size: 24px; }
+
+nav {
+	display: flex; 
+	position: relative;
+	z-index: 1001;
+	width: 100%;
+	padding: 0 200px; 
+	background-color: rgb(23, 111, 56);
+}
+
+nav.home {
+	position: absolute;
+	top: initial;
+	bottom: 0;	
+}
+
+nav > a, nav > a:active, nav > a:visited {
+	flex: 1 1 auto; 
+	padding: 28px;
+	font-family: 'Lato', sans-serif; 
+	font-size: 14px; 
+	text-align: center;
+	text-decoration: none;
+	color: #aaa;
+}
+
+nav > a.selected { color: #eee; }
+
+nav > a:hover {
+	background-color: #DDD;
+	text-decoration: none;
+	color: rgb(23, 111, 56);
+}
+
+.carousel-cell {
+	width:100%; height: 100%; 
+	padding: 10px;
+	background-position: center center;
+	background-size: cover;
+}
+
+p { margin-bottom: 2em; }
+
+li.inline-text { display: block; }
+
+li.inline-text i {
+	margin-right: 7px;
+	color: rgb(23, 111, 56);
+}
+
+li.inline-text p { margin-bottom: .75em; }
+
+.page-title {
+	margin: 20px 60px 15px;
+	text-align: center;
+}
+
+.page-margins { margin: 0 40px 25px; }
+.flex-grid { display: flex; }
+.flex-column { 
+	flex: 1; 
+	padding: 0 20px;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+.text-wrapper {
+	position: relative;
+}
+
+.animated-words {
+	display: inline-block;
+}
+
+.animated-words span {
+	position: absolute;
+	top: 0;
+	opacity: 0;
+	overflow: hidden;
+	width: 400px;
+	height: 1.5em;
+	text-align: left;	
+	color: rgb(23, 111, 56);
+}
+
+.eight-words span {
+	animation: animateEightWords 16s linear infinite 0s;
+}
+
+.six-words span {
+	animation: animateSixWords 12s linear infinite 0s;
+}
+
+.four-words span {
+	animation: animateFourWords 8s linear infinite 0s;
+}
+
+@-webkit-keyframes animateEightWords {
+    0% { opacity: 0; }
+    2% { opacity: 0; -webkit-transform: translateY(-30px); }
+    5% { opacity: 1; -webkit-transform: translateY(0px);}
+    10% { opacity: 1; -webkit-transform: translateY(0px); }
+    12% { opacity: 0; -webkit-transform: translateY(30px); }
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@-webkit-keyframes animateSixWords {
+    0% { opacity: 0; }
+    2% { opacity: 0; -webkit-transform: translateY(-30px); }
+    5% { opacity: 1; -webkit-transform: translateY(0px);}
+    12% { opacity: 1; -webkit-transform: translateY(0px); }
+    15% { opacity: 0; -webkit-transform: translateY(30px); }
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@-webkit-keyframes animateFourWords {
+    0% { opacity: 0; }
+    2% { opacity: 0; -webkit-transform: translateY(-30px); }
+    5% { opacity: 1; -webkit-transform: translateY(0px);}
+    15% { opacity: 1; -webkit-transform: translateY(0px); }
+    19% { opacity: 0; -webkit-transform: translateY(30px); }
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+.animated-words span:nth-child(2) { animation-delay: 2s; }
+.animated-words span:nth-child(3) { animation-delay: 4s; }
+.animated-words span:nth-child(4) { animation-delay: 6s; }
+.animated-words span:nth-child(5) { animation-delay: 8s; }
+.animated-words span:nth-child(6) { animation-delay: 10s; }
+.animated-words span:nth-child(7) { animation-delay: 12s; }
+.animated-words span:nth-child(8) { animation-delay: 14s; }
+
+
+
+
+.infos-button:hover {
+  background: rgba( 255, 255, 255, 0.2 );
+  border: 2px solid transparent;
+  padding: 6px 34px 6px 14px !important;
+  transition: .3s;
+}
+.infos-button {
+  margin-top: 24px;
+  font-size: 20px;
+  font-weight: 500;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding: 6px 20px;
+  line-height: 1.7em;
+  background: transparent;
+  border: 2px solid;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  position: relative;
+}
+.infos-button:hover:after{
+  font-size: 32px;
+  line-height: 1em;
+  content: " >";
+  opacity: 0;
+  position: absolute;
+  margin-left: -20px;
+  -moz-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  top: 7px;
+  right: 5px;
+}
+.infos-button:hover:after{
+  opacity: 1;
+  margin-left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+	color: #6E6E6E;
+}
+
+.navigation ul li a{
+	color: #c2c2c2;
+}
+.footer-section {
+	background: #2C2C2C;
+}
+@media (min-width: 775px){
+	.footer-section {
+		height: 62px;
+}
+}
+.navigation li, .navigation p {
+  display: inline-block;
+  padding: 22px 8px;
+}
+.footer-bottom {
+  background: #171717;
+}
+
+.social {
+  margin: 23px 0 8px;
+}
+.social a {
+	font-size: 32px;
+	margin: 0 10px;
+	color: #8c8c8c;
+}
+.social a:hover {
+	color: #3d84e6;
+}
+
+.social p a {
+    font-size: 16px;
+    margin-left: 3px;
+}
