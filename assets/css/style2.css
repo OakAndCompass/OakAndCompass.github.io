@@ -3,18 +3,52 @@
 
 /* phones */
 @media only screen and (max-width: 768px) {
+	header { justify-content: center; }
+	#logo { margin-left: 0 !important; }
+
+	nav.home { position: relative !important; }
+	
+	nav > a {
+		flex: 1 1 100% !important;
+		display: none;
+	}
+
+	nav > button {
+		display: inline-block !important;
+		font-size: 40px !important;
+		padding: 15px !important;
+		text-align: right !important;
+	}
+
 	.main-carousel { 
 		position: relative !important; 
 		height: 500px !important;
 	}
-	nav.home {
-		position: relative !important;
+
+	header.getinvolved { 
+		background-position: center 0 !important; 
+		background-size: cover !important; 
+	}
+	.bottom-banner.getinvolved { 
+		background-position: center 0 !important; 
+		background-size: cover !important;
+	}
+
+	header.contact {
+		background-position: center 0 !important;
+		background-size: cover !important;
 	}
 }
 
 /* tablets, small laptops*/
 @media only screen and (max-width: 992px) {
 	nav { padding: 0 !important; }
+
+	.bottom-banner.about { background-position: center -100px !important; }
+	.bottom-banner.contact { 
+		background-position: center 0 !important;
+		background-size: cover !important;
+	}
 }
 
 body {
@@ -106,6 +140,7 @@ h2 { font-family: 'Lato', san-serif; font-size: 24px; }
 
 nav {
 	display: flex; 
+	flex-wrap: wrap;
 	position: relative;
 	z-index: 1001;
 	width: 100%;
@@ -119,7 +154,11 @@ nav.home {
 	bottom: 0;	
 }
 
-nav > a, nav > a:active, nav > a:visited {
+nav > button {
+	display: none;
+}
+
+nav > a, nav > a:active, nav > a:visited, nav > button {
 	flex: 1 1 auto; 
 	padding: 28px;
 	font-family: 'Lato', sans-serif; 
@@ -127,11 +166,13 @@ nav > a, nav > a:active, nav > a:visited {
 	text-align: center;
 	text-decoration: none;
 	color: #aaa;
+	background-color: rgb(23, 111, 56);
+	border: 0;
 }
 
 nav > a.selected { color: #eee; }
 
-nav > a:hover {
+nav > a:hover, nav >button:hover {
 	background-color: #DDD;
 	text-decoration: none;
 	color: rgb(23, 111, 56);
