@@ -1,0 +1,131 @@
+body {
+	background-image: url('../../IMG_4518.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: darkgray;
+	margin: 0;
+	font-size: 14px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #333;
+}
+
+nav {
+	padding: 30px 80px 250px 80px;
+	margin: 0;
+	font-family: 'The Light Font';
+	font-size: 20px;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.8+0,0+100 */
+	background: -moz-linear-gradient(top, rgba(256,265,256,.85) 40%, rgba(256,265,256,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(256,265,256,.85) 40%,rgba(256,265,256,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(256,265,256,.85) 40%,rgba(256,265,256,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+
+}
+
+#logo {
+	width: 300px;
+	height: 200px;
+	position: relative;
+	left: -37px;
+	flex-shrink: 0;
+
+	background-image: url('../../30th_w/30th_w.png');
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#line {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	background-color: red;
+	height: 100%;
+	width: 2px;
+}
+
+nav > a:nth-child(-n+2) {
+	order: 0;
+}
+nav > a:nth-child(3) {
+	order: 1;
+}
+nav > a:nth-child(n+4) {
+	order: 2;
+}
+
+nav > a {
+	position: relative;
+	padding: 15px;
+	margin: 10px;
+	text-decoration: none;
+	flex: 1 1 auto;
+	text-align: center;
+	color: rgba(108,113,116);
+}
+
+nav > .nav:hover {
+	color: #000;
+	text-decoration: none;
+}
+
+nav > .nav:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	top: 0;
+	left: 0;
+	background-color: #6C7174;
+
+	clip-path: polygon(0% 50%, 100% 100%, 100% 0);
+	visibility: hidden;
+	-webkit-transform-origin: right;
+	transform-origin: right;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+nav > .nav:hover:before {
+	visibility: visible;
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+}
+
+h1 {font-size: 36px;margin: .67em 0;}
+h2 {font-size: 30px;}
+
+h1,h2,h3 {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-family: inherit;
+	font-weight: 500;
+	line-height: 1.1;
+	color: inherit;
+}
+
+#mission {
+	/*color: #6C7174;*/
+	color: rgba(108,113,116,80%);
+	background-color: rgba(256,256,256,1);
+	padding: 40px;
+	width: 500px;
+	float: right;
+	text-align: right;
+	font-family: 'The Light Font';
+	position: relative;
+	top: -200px;
+}
