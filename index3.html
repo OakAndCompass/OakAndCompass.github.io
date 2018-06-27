@@ -21,29 +21,98 @@
 	<![endif]-->
 </head>
 <body>
-  <nav class="home">
-    <a class="nav" href="about.html">The Project</a>
-    <a class="nav" href="getinvolved.html">Get Involved</a>
-    <a id="logo" href="index2.html"></a>
-    <a class="nav" href="contact.html">Contact Us</a>
-    <a class="nav" href="donate.html">Donate</a>
-  </nav>
+  <div id="roof" class="parallax">
+    <nav class="home">
+      <a class="nav" href="#theProject">The Project</a>
+      <a class="nav" href="getinvolved.html">Get Involved</a>
+      <a id="logo" class="homelogo" href="#roof"></a>
+      <a class="nav" href="contact.html">Contact Us</a>
+      <a class="nav" href="donate.html">Donate</a>
+    </nav>
 
-	<!-- Logo -->
-  <header class="home">
-    <div id="mission">
-      <h1>Artists and artist communities are essential for a vibrant society.</h1>
-      <h2>We exist to give artists a safe, affordable, and inspiring place to live, work, and express themselves.</h2>
+  	<!-- Logo -->
+    <header>
+      <div id="mission">
+        <h1>Artists and artist communities are essential for a vibrant society.</h1>
+        <h2>We exist to give artists a safe, affordable, and inspiring place to live, work, and express themselves.</h2>
+      </div>
+    </header>
+  </div>
+
+  <div id="family" class="parallax">
+    <div id="theProject" class="about">
     </div>
-  </header>
+
+    
+    <div class="about_txt">
+      <h1>About The Project</h1>
+      <p class="about-text">
+        Many of the members of the Oak & Compass working group were part of a live/work warehouse that ran for more than a decade in West Oakland before being shut down due to unsympathetic landlords and unpermitted construction. That project flourished, with 12 bedrooms offering below-market rent, weekly flow arts-focused skill shares, superb fabrication projects from sailboats to monumental steel art made by resident artists, and a strong community of mutual support.
+      </p>  
+      <p class="about-text">
+        We are committed to making an up-to-code, compliant, legal live/work warehouse community that will bring together affordable housing, opportunities for people to create and learn about art, a venue for events and performances, and a strong community grounded in mutual support and creative expression. This is different from a bunch of apartments because residents and studio users will not just see each other in hallways, but share a kitchen and common spaces so that unexpected and enriching interactions are the daily norm.
+      </p>
+    </div>
+  </div>
 
 	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
   <script src="assets/js/modernizr-latest.js"></script> 
-  <script type='text/javascript' src='assets/js/jquery.min.js'></script>
-  <script type='text/javascript' src='assets/js/jquery.mobile.customized.min.js'></script>
-  <script type='text/javascript' src='assets/js/jquery.easing.1.3.js'></script> 
-  <script type='text/javascript' src='assets/js/flickity.pkgd.min.js'></script>
-  <script src="assets/js/bootstrap.min.js"></script> 
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+  <script>
+    //https://css-tricks.com/snippets/jquery/smooth-scrolling/
+    // Select all links with hashes
+    $('a[href*="#"]')
+      // Remove links that don't actually link to anything
+      .not('[href="#"]')
+      .not('[href="#0"]')
+      .click(function(event) {
+        // On-page links
+        if (
+          location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+          && 
+          location.hostname == this.hostname
+        ) {
+          // Figure out element to scroll to
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          // Does a scroll target exist?
+          if (target.length) {
+            // Only prevent default if animation is actually gonna happen
+            event.preventDefault();
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 1000, function() {
+              // Callback after animation
+              // Must change focus!
+              var $target = $(target);
+              $target.focus();
+              if ($target.is(":focus")) { // Checking if the target was focused
+                return false;
+              } else {
+                $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                $target.focus(); // Set focus again
+              };
+            });
+          }
+        }
+      });
+  
+    $(document).ready(function() {
+      $(window).scroll(function(e) {        
+        if ($(this).scrollTop() > 147) {
+          $('nav').removeClass("home").addClass("fixed");
+          $('#logo').removeClass('homelogo').addClass('fixedlogo');
+        } else {
+          $('nav').removeClass("fixed").addClass("home");
+          $('#logo').removeClass('fixedLogo').addClass('homelogo');
+        }
+      });
+    });
+  </script>
   
   
 </body>
