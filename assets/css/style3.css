@@ -191,11 +191,11 @@ nav > a {
 	text-decoration: none;
 	flex: 1 1 auto;
 	text-align: center;
-	color: rgba(108,113,116);
+	color: rgba(108,113,116) !important;
 }
 
 nav > .nav:hover {
-	color: #000;
+	color: #000 !important;
 	text-decoration: none;
 }
 
