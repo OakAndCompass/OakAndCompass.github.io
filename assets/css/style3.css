@@ -191,11 +191,11 @@ nav > a {
 	text-decoration: none;
 	flex: 1 1 auto;
 	text-align: center;
-	color: rgba(108,113,116) !important;
+	color: rgb(108,113,116);
 }
 
 nav > .nav:hover {
-	color: #000 !important;
+	color: #000;
 	text-decoration: none;
 }
 
@@ -207,7 +207,7 @@ nav > .nav:before {
 	top: 0;
 	left: 0;
 	background-color: #6C7174;
-
+	-webkit-clip-path: polygon(0% 50%, 100% 100%, 100% 0);
 	clip-path: polygon(0% 50%, 100% 100%, 100% 0);
 	visibility: hidden;
 	-webkit-transform-origin: right;
